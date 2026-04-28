@@ -1,0 +1,129 @@
+---
+title: Sådan fungere vote systemet
+description: "I denne guide forklare vi lidt om hvordan vote systemet fungere og hvordan man som server ejer kan give fordele til spillere der voter på ens server."
+username: "GriffenG"
+uuid: "6d7d19a5-bc8b-48e3-9d01-de01f16d905f"
+released: "25/09/2025"
+tags: ["vote", "skript", "addon"]
+---
+
+## Hvad er vote systemet og hvordan fungere det?
+Vote systemet er en måde spillere på SuperAwesome kan stemme på de servere de bedst kan li' og spiller mest på. \
+At vote på en server hjælper serveren med hurtigere at anskaffe Serverpoints hvilket hjælper serveren med at blive vist før andre server i lobbyen. 
+
+Alle spillere har 1 vote om dagen, hvor VIP og PRO har 2 votes om dagen. Man kan ved hjælp at vores skript addon tjekke om en spiller har votet, mere info på det herunder.
+
+---
+
+<br />
+
+### Vote Object
+
+Et vote objekt bliver brugt i Vote Event, eller Pending Vote expression.  
+
+Du kan få adgang til følende genem vote objektet:
+- `id` - Votets unikke ID i vores API
+- `username` - Brugernavn på spilleren der har votet
+- `uuid` - UUID på spilleren der har votet
+- `dato` - Datoen hvor spilleren har votet
+
+Eksempel: \
+Brug `id of {_vote}` for at få IDet på votet, dette kan også bruges på andre attributer i Vote objektet
+
+---
+
+<br />
+
+### Vote Event
+
+Vi har i skript addonet inbygget et event som bliver kørt hver gang en spiller voter på din server, det derfor nemt at fx give en spiller en reward når de har votet.
+
+Eventet giver dig adgang: til følgende:
+- `event-id` - Votets unikke ID i vores API
+- `event-date` - Datoen hvor spilleren har votet  
+- `event-player` - Spilleren der har votet
+
+Eksempel:
+```java
+on superawesome vote:
+    broadcast "%event-player% har lige votet på serveren!"
+    superawesome process vote id of %event-id%
+```
+
+<br />
+
+---
+
+<br />
+
+### Pending Vote
+
+Hvis du vil tjekke om en spiller har en ventende vote kan du bruge:  
+
+```java
+pending vote from player
+```
+
+Dette returnerer et vote objekt som du kan læse ovenover hva indenholder.
+
+<br />
+
+---
+
+<br />
+
+### Process Vote
+Når en spiller har votet på din server skal du altid process voten for at den bliver registreret i vores system.
+Det er i samme omgang du vil have mulighed for at give spilleren en belønning for at vote på din server.
+
+Eksempel:
+```java
+command /acceptvote [<player>]:
+    trigger:
+        if arg-1 is set:
+            if pending vote from arg-1:
+                set {_vote} to pending vote from arg-1
+                superawesome process vote id of {_vote}
+                send "Du har nu processed votet på serveren, tak for din støtte!" to arg-1
+```
+
+<br />
+
+---
+
+<br />
+
+### Skript Addon Eksempel
+Her er et fuldt eksempel på hvordan du kan bruge alle de ting skrevet ovenover i et skript hvor du giver din spillere muligheden for at ta et kit efter de har voted.
+
+```java
+on superawesome vote:
+    broadcast "----------------------------"
+    broadcast "Vote id: %event-id%"
+    broadcast "Vote date: %event-date%"
+    broadcast "Vote player %event-player%"
+
+command /kit <text>:
+    trigger:
+        if arg-1 is "vote":
+            set {_vote} to pending vote from player
+            if {_vote} is not set:
+                if player has voted is true:
+                    message "Du har allerede voted i dag, kom tilbage i morgen"
+                else:
+                    message "Du kan vote på vores server med /vote alex og modtage en diamond kit"
+            else:
+                message "Vote player: %player of {_vote}%"
+                message "Vote date: %date of {_vote}%"
+                superawesome process vote id of {_vote}
+
+                give 1 diamond to player
+                give 1 diamond sword to player
+                give 1 diamond pickaxe to player
+                give 1 diamond axe to player
+                give 1 diamond shovel to player
+                message "Du har nu modtaget kit vote"
+
+        else:
+            message "Usage: /kit vote"
+```

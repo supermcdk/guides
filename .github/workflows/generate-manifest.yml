@@ -1,0 +1,42 @@
+name: Generate Blog Manifest
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.mdx'
+      - '**/*.md'
+      - '.github/workflows/generate-manifest.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-manifest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install gray-matter
+
+      - name: Generate manifest
+        run: node .github/scripts/generate-manifest.js
+
+      - name: Commit and push manifest
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add manifest.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update blog manifest [skip ci]" && git push)

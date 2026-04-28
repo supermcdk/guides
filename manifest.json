@@ -1,0 +1,175 @@
+{
+  "lastUpdated": "2026-04-28T17:51:23.008Z",
+  "posts": [
+    {
+      "slug": "add-plugin",
+      "category": "guides",
+      "file": "guides/add-plugin.mdx",
+      "metadata": {
+        "title": "Hvordan tilføjer man plugins til sin server?",
+        "description": "I denne guide viser vi dig, hvordan du tilføjer plugins fra nettet til din server",
+        "author": "GriffenG",
+        "category": "guides",
+        "publishedAt": "22/10/2025",
+        "slug": "add-plugin",
+        "tags": [
+          "plugins",
+          "sftp",
+          "konfiguration"
+        ],
+        "featured": false
+      }
+    },
+    {
+      "slug": "ekstern-hosting",
+      "category": "guides",
+      "file": "guides/ekstern-hosting.mdx",
+      "metadata": {
+        "title": "Sådan hoster du din SuperAwesome server på en ekstern host",
+        "description": "I denne guide vil vi gennemgå hvordan du kan hoste din SuperAwesome server på en ekstern host.",
+        "author": "GriffenG",
+        "category": "guides",
+        "publishedAt": "29/09/2025",
+        "slug": "ekstern-hosting",
+        "tags": [
+          "hosting",
+          "vps",
+          "opsætning"
+        ],
+        "featured": false
+      }
+    },
+    {
+      "slug": "link-discord",
+      "category": "guides",
+      "file": "guides/link-discord.mdx",
+      "metadata": {
+        "title": "Link Minecraft til din Discord konto",
+        "description": "Guide til hvordan man linker sin konto til vores Discord Server, etc.",
+        "author": "GriffenG",
+        "category": "guides",
+        "publishedAt": "27/09/2025",
+        "slug": "link-discord",
+        "tags": [
+          "discord",
+          "konto",
+          "verifikation"
+        ],
+        "featured": false
+      }
+    },
+    {
+      "slug": "login-sftp",
+      "category": "guides",
+      "file": "guides/login-sftp.mdx",
+      "metadata": {
+        "title": "Hvordan logger man ind på sin SFTP?",
+        "description": "I denne guide viser vi dig hvordan du logger ind på din SFTP.",
+        "author": "GriffenG",
+        "category": "guides",
+        "publishedAt": "22/10/2025",
+        "slug": "login-sftp",
+        "tags": [
+          "sftp",
+          "filer",
+          "opsætning"
+        ],
+        "featured": false
+      }
+    },
+    {
+      "slug": "opsat-domane",
+      "category": "guides",
+      "file": "guides/opsat-domane.mdx",
+      "metadata": {
+        "title": "Tilknyt dit eget domæne til din server",
+        "description": "I denne guide vil vi gennemgå hvordan du kan tilknytte dit eget domæne til din SuperAwesome server.",
+        "author": "GriffenG",
+        "category": "guides",
+        "publishedAt": "28/09/2025",
+        "slug": "opsat-domane",
+        "tags": [
+          "domæne",
+          "dns",
+          "opsætning"
+        ],
+        "featured": false
+      }
+    },
+    {
+      "slug": "opsat-reklame",
+      "category": "guides",
+      "file": "guides/opsat-reklame.mdx",
+      "metadata": {
+        "title": "Opsæt en reklame på SuperAwesome",
+        "description": "I denne guide gennemgår vi, hvordan du opretter og opsætter en reklame på SuperAwesome.",
+        "author": "SuperAwesome",
+        "category": "guides",
+        "publishedAt": "22/10/2025",
+        "slug": "opsat-reklame",
+        "tags": [
+          "reklame",
+          "annoncering"
+        ],
+        "featured": false
+      }
+    },
+    {
+      "slug": "server-manager",
+      "category": "guides",
+      "file": "guides/server-manager.mdx",
+      "metadata": {
+        "title": "Få styr på din server med Server Manager",
+        "description": "I denne guide viser vi dig, hvordan du styrer din server ved hjælp af Server Manager",
+        "author": "xWarn",
+        "category": "guides",
+        "publishedAt": "23/10/2025",
+        "slug": "server-manager",
+        "tags": [
+          "server-manager",
+          "indstillinger",
+          "panel"
+        ],
+        "featured": false
+      }
+    },
+    {
+      "slug": "server-payout",
+      "category": "guides",
+      "file": "guides/server-payout.mdx",
+      "metadata": {
+        "title": "Send ems til spillere: SAStore & Skript",
+        "description": "I denne guide viser vi dig, hvordan du sender ems til andre spillere med Skript og SAStore",
+        "author": "SuperAwesome",
+        "category": "guides",
+        "publishedAt": "09/12/2025",
+        "slug": "server-payout",
+        "tags": [
+          "emeralder",
+          "skript",
+          "sastore"
+        ],
+        "featured": false
+      }
+    },
+    {
+      "slug": "vote-system",
+      "category": "guides",
+      "file": "guides/vote-system.mdx",
+      "metadata": {
+        "title": "Sådan fungere vote systemet",
+        "description": "I denne guide forklare vi lidt om hvordan vote systemet fungere og hvordan man som server ejer kan give fordele til spillere der voter på ens server.",
+        "author": "GriffenG",
+        "category": "guides",
+        "publishedAt": "25/09/2025",
+        "slug": "vote-system",
+        "tags": [
+          "vote",
+          "skript",
+          "addon"
+        ],
+        "featured": false
+      }
+    }
+  ]
+}

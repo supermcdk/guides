@@ -1,0 +1,59 @@
+---
+title: Hvordan tilføjer man plugins til sin server?
+description: "I denne guide viser vi dig, hvordan du tilføjer plugins fra nettet til din server"
+username: "GriffenG"
+uuid: "6d7d19a5-bc8b-48e3-9d01-de01f16d905f"
+released: "22/10/2025"
+tags: ["plugins", "sftp", "konfiguration"]
+---
+
+### Introduktion
+Vil du gerne skabe den næste store server på SuperAwesome? Så vil et godt sted at starte være at få smidt nogle plugins på din server.
+Vi vil i denne guide gå igennem, hvordan du henter plugins fra hjemmesider som SpigotMC, og hvordan du derefter får dem ind på din server. Vi vil også kort gennemgå, hvordan du kan ændre konfigurationen i de plugins, du vælger at hente til din server.
+
+> Plugins kan være avancerede og svære at forstå for nogle. Oplever du problemer, kan du altid spørge i [#📼plugin-hjælp](https://discord.com/channels/739186031412379738/1083887719077380156) på vores Discord.
+
+---
+
+<br />
+
+### Tilføj dit hentede plugin
+Vi gennemgår her trin for trin, hvordan du finder og uploader de plugins, du gerne vil bruge på din server.
+
+1. Gå ind på [SpigotMC](https://www.spigotmc.org/) og find det plugin, du gerne vil bruge. I denne guide har vi valgt [TAB](https://www.spigotmc.org/resources/tab-1-7-x-1-21-10.57806/).
+2. Tjek, at det plugin, du har valgt, er understøttet af den version, din server kører. På billedet kan du se, hvor det normalt står. Med nogle plugins kan du også tilgå deres tidligere versioner og finde en version, der understøtter din serverversion.
+   1. Hvis den nyeste version ikke understøtter din servers version, kan du forsøge at tjekke pluginnets tidligere versioner for at se, om de muligvis har en version, der understøtter. Du tilgår deres tidligere versioner ved at klikke på "Updates". Tjek derefter, hvilken version der understøtter din server, og download den under "Version History".
+   2. Nogle plugins har også et link til GitHub. Her skal du gå ind og finde deres tidligere versioner.
+3. Når du har hentet pluginnet ned på din pc, skal du tilgå SFTP for din server. Se hvordan [her](https://superawesome.dk/help/login-sftp/).
+4. Flyt derefter filen ind via SFTP ved at trække den fra dine downloads og lægge den i mappen, der hedder "plugins" på din server.
+5. Før pluginnet kan bruges på din server, skal du genstarte den ved at skrive /stop, når du er logget ind.
+   1. Hvis du får en fejl om, at du ikke har adgang, kan det være, fordi du ikke er OP. Det kan du få ved at skrive /sm fixop.
+6. Når alt er gjort, burde du kunne skrive /pl og se dit plugin stå med grønt.
+   1. Står det med rødt, er der noget galt. Tag et kig i din log, ellers kan du altid spørge i [#📼plugin-hjælp](https://discord.com/channels/739186031412379738/1083887719077380156) på vores Discord.
+   
+<br />
+
+Du burde nu være i stand til at installere næsten hvilket som helst plugin på din server. Vær opmærksom på, at nogle plugins kræver, at du har andre plugins installeret på din server. Det står normalt på deres Spigot-side.
+
+---
+
+<br />
+
+### Sådan ændrer du i konfigurationen af plugins
+
+Fedt! Hvis du har fulgt guiden frem til nu, skulle du gerne have TAB installeret på din server og loadet. Vi går nu igennem, hvordan man gør sin server mere personlig ved at ændre i dine plugins' konfigurationsfiler.
+
+1. Til at starte med skal du logge ind på din SFTP. Se hvordan [her](https://superawesome.dk/help/login-sftp/).
+2. Naviger derefter til "plugins"-mappen. Du vil derefter se en "TAB"-folder – åbn den.
+3. Folderen vil indeholde en masse filer. Den, vi er interesserede i, er den, der hedder "config.yml".
+4. I vores guide vil vi gerne ændre servernavnet i tab-listen. Gå til linje 14 eller deromkring.
+   1. Du kan også søge ved at klikke CTRL + F i mange redigeringsprogrammer. Søg f.eks. efter "Server".
+5. Vi ændrer herefter linjen til "&a&lSuper&b&lAwesome". Herefter kan du tage et kig på de andre ting i filen og ændre, som du vil.
+   1. De fleste plugins understøtter Minecrafts normale farvekoder, som kan findes [her](https://www.digminecraft.com/lists/color_list_pc.php).
+   2. I nogle plugins på nyere versioner af Minecraft (1.16+) kan du også bruge helt custom farver via HEX-koder. Det er lidt mere avanceret, og vi går ikke i dybden med det her, men det kan nemt slås op.
+6. Når du har gemt dine ændringer, kan du genstarte din server og se ændringerne.
+   1. Nogle plugins har en kommando til at reloade konfigurationen. Med TAB kan du bruge /tab reload.
+
+<br />
+
+Ved at følge disse trin burde du nu være i stand til at downloade plugins til din server, konfigurere dem og dermed lave præcis den server, du drømmer om.

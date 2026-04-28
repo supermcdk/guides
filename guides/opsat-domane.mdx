@@ -1,0 +1,36 @@
+---
+title: Tilknyt dit eget domæne til din server
+description: "I denne guide vil vi gennemgå hvordan du kan tilknytte dit eget domæne til din SuperAwesome server."
+username: "GriffenG"
+uuid: "6d7d19a5-bc8b-48e3-9d01-de01f16d905f"
+released: "28/09/2025"
+tags: ["domæne", "dns", "opsætning"]
+---
+
+## Introduktion
+I denne guide vil vi forklare hvordan du forbinder det domæne til din SuperAwesome server. \
+Et domæne gør det muligt for dig er gøre så dine spillere kan forbinde til din server uden først at skulle tilgå SuperAwesomes lobby, dit domæne kan f.eks. være `mc.servernavn.dk` så det vil også gøre det nemmere for dine spillere at huske din server.
+
+Før du kan opsætte dit domæne skal du have følgende:
+- En server på SuperAwesome.
+- VIP eller Pro på kontoen som ejer serveren.
+- Et domæne navn som f.eks. `mc.servernavn.dk`.
+
+<br />
+
+---
+
+<br />
+
+## Forbind dit domæne til din SuperAwesome server
+Når du har dit domæne og har adgang til at ændre DNS indstillingerne skal du følge disse trin:
+1. Log ind på din domæne udbyders kontrolpanel og find sektionen for DNS indstillinger.
+2. Opret en SRV record med følgende oplysninger:
+   - **Navn/Service**: `_minecraft._tcp.mc.servernavn.dk`
+   - **Target**: `servernavn.superawesome.dk`
+   - **Priority**: `0`
+   - **Weight**: `5`
+   - **Port**: `25565`
+Bruger du cloudflare skal det se således ud: <img src="https://i.imgur.com/8S1U4L4.png" />
+
+Der kan gå op til 24 timer før du faktisk kan forbinde til din server via dit domæne, normalt er det dog meget hurtigere.

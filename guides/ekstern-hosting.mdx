@@ -1,0 +1,47 @@
+---
+title: Sådan hoster du din SuperAwesome server på en ekstern host
+description: "I denne guide vil vi gennemgå hvordan du kan hoste din SuperAwesome server på en ekstern host."
+username: "GriffenG"
+uuid: "6d7d19a5-bc8b-48e3-9d01-de01f16d905f"
+released: "29/09/2025"
+tags: ["hosting", "vps", "opsætning"]
+---
+
+## Introduktion
+Ønsker du selv at stå for at hoste din SuperAwesome server på en ekstern host vil vi i denne guide gennemgå hvordan det fungere og hvad det kræver. \
+Når du hoster din server udenfor SuperAwesome vil du selv skulle stå for at administrere din maskine, opdatere det software du bruger og ta' backups, så vi forslår kun at man selv hoster sin server hvis man har styr på alle de ting.
+
+Før du kan bruge ekstern hosting skal du have følgende:
+- Pro rank på den SuperAwesome konto du ejer din server på. Du køber Pro rank [her](https://superawesome.dk/butik/pro).
+- Valgt at benytte dit Pro rank på den server du vil hoste eksternt.
+- En ekstern host (VPS, dedikeret server eller en gameserver) vi forslår [Suble](https://suble.io/).
+
+<br />
+
+Vi anbefaler på det kræftligste at du enten selv eller en fra din staff team har forstand på at administrere en server hvis i vælger at hoste jeres server eksternt, da SuperAwesome ikke kan hjælpe med problemer der opstår på din eksterne host.
+Hvis du ikke har styr på alt det tekniske men stadig vil hoste eksternt vil vi forslå du køber en Gameserver da sådan hosts som regl hjælper med forskellige tekniske problemer.
+
+---
+
+<br />
+
+### Opsætning af ekstern server
+Hvis du vælger at at købe en VPS server skal du selv opsætte og installere alt det nødvendige software, vi anbefaler at du bruger en Linux distribution som Ubuntu 24.04 eller nyere. \
+For at gøre det så nemt som muligt at administrere servere på din VPS og give dig selv adgang til en webbaseret kontrolpanel anbefaler vi at du installerer [Pelican](https://pelican.dev/docs/panel/getting-started).
+
+Vælger du derimod at hoste via en gameserver host vil alt som regl allerede være sat op for dig, hvis du oplever problemer vil du næsten altid kunne få hjælp fra din host.
+
+---
+
+<br />
+
+### Forbind din eksterne server til SuperAwesome
+Når du har anskaffet dig en ekstern host skal du forbinde den til SuperAwesome, det gør du ved at følge disse trin:
+1. Log ind på SuperAwesome og vælg den server du gerne vil hoste eksternt, gøres med ``/sm changeserver <servernavn>``. Hvis du ikke allerede har serveren kan du oprette den med ``/sm createserver <servernavn>``.
+2. Herefter skal du sætte din server som din "pro server" denne gøres med ``/sm changepro <servernavn>``. **Bemærk det kun muligt at have 1 pro server ad gangen.**
+3. Nu skal du sætte din server til at pege mod din eksterne host, dette gøre med ``/sm set ip <IP:PORT>``. Her skal du skrive IP adressen og porten på din eksterne host, eksempelvis ``192.168.0.1:25565``.
+
+<br />
+
+Bemærk når du har sat din server som værende hosted eksternt vil du ikke længere kunne starte eller stoppe din server med kommandoer som ``/sm start`` eller ``/sm stop``, dette skal gøres på din eksterne host.
+Du kan bruge ``/sm set status <online/offline>`` til at sætte statusen på din server til online eller offline på SuperAwesome.

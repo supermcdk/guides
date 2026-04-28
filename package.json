@@ -1,0 +1,20 @@
+{
+  "name": "superawesome-guides",
+  "version": "1.0.0",
+  "description": "Guides og nyheder til SuperAwesome, hosted på CDN",
+  "private": true,
+  "scripts": {
+    "generate-manifest": "node .github/scripts/generate-manifest.js"
+  },
+  "keywords": [
+    "superawesome",
+    "minecraft",
+    "guides",
+    "mdx"
+  ],
+  "author": "SuperAwesome",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}

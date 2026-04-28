@@ -1,0 +1,28 @@
+---
+title: "Send ems til spillere: SAStore & Skript"
+description: "I denne guide viser vi dig, hvordan du sender ems til andre spillere med Skript og SAStore"
+username: "SuperAwesome"
+uuid: "f33aebcf-8ddc-4a1c-b9d5-7ca2a7abea99"
+released: "09/12/2025"
+tags: ["emeralder", "skript", "sastore"]
+---
+
+## Krav
+
+- En server på SuperAwesome
+- Nok ems på din konto, tjek med /bal i limbo eller en lobby.
+- [Skript](https://github.com/Matocolotoe/Skript-1.8/releases) og [SAStore](https://github.com/supermcdk/store_plugin/releases) installeret på din server.
+- API nøglen i plugins/SAStore/config.yml
+
+<br />
+
+---
+
+<br />
+
+## Eksempel med Skript
+```java
+on break stone:
+    send "Du har minet en stone block! Her får du 100 ems!"
+    superawesome store give 100 emeralds to player with title "Du har modtaget ems" and reason "Beløb 100"
+```

@@ -1,0 +1,30 @@
+---
+title: Hvordan logger man ind på sin SFTP?
+description: "I denne guide viser vi dig hvordan du logger ind på din SFTP."
+username: "GriffenG"
+uuid: "6d7d19a5-bc8b-48e3-9d01-de01f16d905f"
+released: "22/10/2025"
+tags: ["sftp", "filer", "opsætning"]
+---
+
+### Introduktion
+
+SFTP er hvad du bruger til at tilgå din server og ændre i de filer som ligger på den, når du opretter forbindelse til din SFTP vil du få en liste med alt hva du har og have nem mulighed for at ændre evt konfigurationfiler.
+
+Før vi starter skal du sikre dig du har følgende:
+- En SFTP klient, vi forslå WinSCP som kan downloades [her](https://winscp.net/eng/download.php)
+- Din servers SFTP kode, vi gennemgår herunder hvordan den oprettes
+
+### Tilslut din servers SFTP
+Lad os starte, følg stepsne herunder også er du inde på din SFTP in no time.
+
+1. Åben din SFTP klient, WinSCP eller noget andet som filezilla
+2. Et vindu vil åbne hvor du kan skrive nogen ting ind ([se billed](https://i.imgur.com/F0FFCsJ.png))
+3. Udfyld de forskelige fleter sådan her:
+    - **Host**: `sftp.superawesome.dk`
+    - **Brugernavn**: `(Dit server navn)`
+    - **Kodeord**: `(Din sftp kode)`
+    - **Port**: `22`
+4. Klik forbind derefter vil din servers filer blive vist på venstre side ([se billed](https://i.imgur.com/OPDYrav.png))
+
+Du nu logget ind på din servers SFTP og kan begynde og installere plugins, vi har også en guide til det [her](https://superawesome.dk/help/add-plugin/)
