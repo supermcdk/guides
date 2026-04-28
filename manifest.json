@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-28T17:52:52.687Z",
+  "lastUpdated": "2026-04-28T18:40:12.442Z",
   "posts": [
     {
       "slug": "add-plugin",
@@ -9,6 +9,7 @@
         "title": "Hvordan tilføjer man plugins til sin server?",
         "description": "I denne guide viser vi dig, hvordan du tilføjer plugins fra nettet til din server",
         "author": "GriffenG",
+        "uuid": "6d7d19a5-bc8b-48e3-9d01-de01f16d905f",
         "category": "guides",
         "publishedAt": "22/10/2025",
         "slug": "add-plugin",
@@ -28,6 +29,7 @@
         "title": "Sådan hoster du din SuperAwesome server på en ekstern host",
         "description": "I denne guide vil vi gennemgå hvordan du kan hoste din SuperAwesome server på en ekstern host.",
         "author": "GriffenG",
+        "uuid": "6d7d19a5-bc8b-48e3-9d01-de01f16d905f",
         "category": "guides",
         "publishedAt": "29/09/2025",
         "slug": "ekstern-hosting",
@@ -47,6 +49,7 @@
         "title": "Link Minecraft til din Discord konto",
         "description": "Guide til hvordan man linker sin konto til vores Discord Server, etc.",
         "author": "GriffenG",
+        "uuid": "6d7d19a5-bc8b-48e3-9d01-de01f16d905f",
         "category": "guides",
         "publishedAt": "27/09/2025",
         "slug": "link-discord",
@@ -66,6 +69,7 @@
         "title": "Hvordan logger man ind på sin SFTP?",
         "description": "I denne guide viser vi dig hvordan du logger ind på din SFTP.",
         "author": "GriffenG",
+        "uuid": "6d7d19a5-bc8b-48e3-9d01-de01f16d905f",
         "category": "guides",
         "publishedAt": "22/10/2025",
         "slug": "login-sftp",
@@ -85,6 +89,7 @@
         "title": "Tilknyt dit eget domæne til din server",
         "description": "I denne guide vil vi gennemgå hvordan du kan tilknytte dit eget domæne til din SuperAwesome server.",
         "author": "GriffenG",
+        "uuid": "6d7d19a5-bc8b-48e3-9d01-de01f16d905f",
         "category": "guides",
         "publishedAt": "28/09/2025",
         "slug": "opsat-domane",
@@ -104,6 +109,7 @@
         "title": "Opsæt en reklame på SuperAwesome",
         "description": "I denne guide gennemgår vi, hvordan du opretter og opsætter en reklame på SuperAwesome.",
         "author": "SuperAwesome",
+        "uuid": null,
         "category": "guides",
         "publishedAt": "22/10/2025",
         "slug": "opsat-reklame",
@@ -122,6 +128,7 @@
         "title": "Få styr på din server med Server Manager",
         "description": "I denne guide viser vi dig, hvordan du styrer din server ved hjælp af Server Manager",
         "author": "xWarn",
+        "uuid": "f33aebcf-8ddc-4a1c-b9d5-7ca2a7abea99",
         "category": "guides",
         "publishedAt": "23/10/2025",
         "slug": "server-manager",
@@ -141,13 +148,15 @@
         "title": "Send ems til spillere: SAStore & Skript",
         "description": "I denne guide viser vi dig, hvordan du sender ems til andre spillere med Skript og SAStore",
         "author": "SuperAwesome",
+        "uuid": "f33aebcf-8ddc-4a1c-b9d5-7ca2a7abea99",
         "category": "guides",
         "publishedAt": "09/12/2025",
         "slug": "server-payout",
         "tags": [
           "emeralder",
           "skript",
-          "sastore"
+          "sastore",
+          "payout"
         ],
         "featured": false
       }
@@ -160,6 +169,7 @@
         "title": "Sådan fungere vote systemet",
         "description": "I denne guide forklare vi lidt om hvordan vote systemet fungere og hvordan man som server ejer kan give fordele til spillere der voter på ens server.",
         "author": "GriffenG",
+        "uuid": "6d7d19a5-bc8b-48e3-9d01-de01f16d905f",
         "category": "guides",
         "publishedAt": "25/09/2025",
         "slug": "vote-system",
