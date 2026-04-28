@@ -70,6 +70,7 @@ function parseMdxFile(filePath) {
         title: data.title || 'Untitled',
         description: data.description || '',
         author: data.author || data.username || 'Unknown',
+        uuid: data.uuid || null,
         category: data.category || category,
         publishedAt: data.publishedAt || data.date || data.released || new Date().toISOString(),
         updatedAt: data.updatedAt,
