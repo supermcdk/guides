@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-28T18:40:12.442Z",
+  "lastUpdated": "2026-06-23T11:23:17.909Z",
   "posts": [
     {
       "slug": "add-plugin",
@@ -37,6 +37,25 @@
           "hosting",
           "vps",
           "opsætning"
+        ],
+        "featured": false
+      }
+    },
+    {
+      "slug": "getting-started",
+      "category": "guides",
+      "file": "guides/getting-started.mdx",
+      "metadata": {
+        "title": "Kom godt i gang med SuperAwesome",
+        "description": "Lær hvordan du joiner SuperAwesome, linker din Discord-konto og opretter din første Minecraft-server.",
+        "author": "SuperAwesome",
+        "uuid": "f33aebcf-8ddc-4a1c-b9d5-7ca2a7abea99",
+        "category": "guides",
+        "publishedAt": "23/06/2026",
+        "slug": "getting-started",
+        "tags": [
+          "new player",
+          "getting started"
         ],
         "featured": false
       }
